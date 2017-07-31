@@ -1,0 +1,33 @@
+ <div class="col-md-6">
+   <h1>Welcome To Mean Application!!!</h1>
+   <h5>Enter your details to get More access</h5>
+ </div>
+ <div class="col-md-6">
+  <form novalidate (ngSubmit)="submitData(f)" #f="ngForm">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" class="form-control" name="name" [ngModel]="person.name">
+  </div>
+  <div class="form-group">
+    <label for="age">Age:</label>
+    <input type="text" class="form-control" name="age" [ngModel]="person.age">
+  </div>
+  <div class="form-group">
+  <label for="gender">Select Gender:</label>
+  <select class="form-control" name="gender" [ngModel]="person.gender">
+    <option value="">Select Gender</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+  </select>
+</div>
+   
+  <div class="form-group">
+    <label for="age">Mobile No:</label>
+    <input type="text" class="form-control" name="mobileNumber" [ngModel]="person.mobileNumber">
+  </div>
+   <input type="hidden" name="_id" [ngModel]="person._id">
+  <button type="submit" class="btn btn-success">{{person._id? "Update":"Submit"}}</button>
+</form>
+ </div>
+ 
+

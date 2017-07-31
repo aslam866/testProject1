@@ -1,0 +1,27 @@
+<table class="table">
+  <thead class="thead-inverse">
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Mobile Number</th>
+      <th>Action</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let person of personDetails;let i = index;">
+      <td>{{person.name}}</td>
+      <td>{{person.age}}</td>
+      <td>{{person.gender}}</td>
+      <td>{{person.mobileNumber}}</td>
+      <td>
+        <button class="btn btn-success" (click)="editPersonDetails(person)">Edit</button>
+        <button class="btn btn-danger" (click)="deletePersonDetails(person._id,i)">Delete</button>
+      </td>
+      
+    </tr>
+  
+  </tbody>
+</table>
+
